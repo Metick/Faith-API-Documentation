@@ -60,13 +60,11 @@
         <section id="intro">
             <h2>Getting Started</h2>
             <div class="clearfix">
-                <p><i class="orange fa fa-exclamation-triangle"></i><bold><span class="intro2 ">Please understand that the documentation is still a Work in progress, and will be changed and modified. The current API version is V0.1</span>
-                                             
-                </p>
+                <p><i class="orange fa fa-exclamation-triangle"></i><bold><span class="intro2 ">Please understand that the documentation is still a Work in progress, and will be changed and modified. The current API version is V0.1</span>                         </p>
             </div>
-            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">string</span>,<span class="hljs-keyword"> bool</span>,<span class="hljs-keyword"> flags</span>)</code></pre>
+            <pre><code class=" language-syn hljs"><span class="hljs-keyword">local</span> Faith={}<br>Faith.CreateGUI(<span class="hljs-keyword">"MainWindow"</span>, <span class="hljs-keyword">TELEPORT</span>)<br>Faith.End()</code></pre>
             <p></p>
-
+            An Example on how to setup the GUI. - note to self, change the example code to have buttons etc.. also being shown and how to use. and initialize the table in the menu.
         </section>
 
 
@@ -115,7 +113,7 @@
 
         <section id="SameLine">
             <h2>Keeping a module on the SameLine as the other one</h2>
-            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.SameLine(<span class="hljs-keyword">ImVec2</span>)</code></pre>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.SameLine()</code></pre>
             <p>sets the module after this void to the same line as the module above SameLine.</p>            
         </section>
 
