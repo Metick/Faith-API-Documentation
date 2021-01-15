@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://x.synapse.to/docs/reference/environment.html -->
+<html lang="en" class="coal"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Lua Drawing API - Faith Documentation</title>
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="rgba(0, 0, 0, 0)">
+<link rel="shortcut icon" href="image">
+<link rel="stylesheet" type="text/css" href="css/variables.css">
+<link rel="stylesheet" type="text/css" href="css/general.css">
+<link rel="stylesheet" type="text/css" href="css/chrome.css">
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="css/custom.css" type=>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+<link rel="stylesheet" type="text/css" href="css/highlight.css" disabled="">
+<link rel="stylesheet" type="text/css" href="css/tomorrow-night.css">
+<link rel="stylesheet" type="text/css" href="css/ayu-highlight.css" disabled="">
+
+<script src="https://kit.fontawesome.com/2b7e1c7f43.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="scrollbar">
+
+    <nav class="toc">
+        <ul>
+            <li><a href="#intro">Getting Started</a></li>
+            <li>
+                <a href="#">Exisiting GUI </a>
+                <ul>
+                    <li><a href="#CreateGUI">Lorem ipsum</a></li>
+                    <li><a href="#CreateWindow">Lorem ipsum</a></li>
+                    <li><a href="#Text">Adding Text</a></li>
+                    <li><a href="#Button">Creating a Button</a></li>
+                    <li><a href="#Toggle">Creating a Toggle</a></li>
+                    <li><a href="#Slider">Creating a Slider</a></li>
+                    <li><a href="#SameLine">Module on SameLine</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#css">Lorem Ipsum</a>
+          <ul>
+            <li><a href="#fonts">Lorem ipsum</a></li>
+            <li><a href="#developer">Lorem ipsum</a></li>
+            <li><a href="#examples">Lorem ipsum</a></li>
+          </ul>
+            </li>
+        </ul>
+      <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+      </svg>
+    </nav>
+    
+    <article class="contents">
+
+
+        <section id="intro">
+            <h2>Getting Started</h2>
+            <div class="clearfix">
+                <p><i class="orange fa fa-exclamation-triangle"></i><bold><span class="intro2 ">Please understand that the documentation is still a Work in progress, and will be changed and modified. The current API version is V0.1</span>
+                                             
+                </p>
+            </div>
+            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">string</span>,<span class="hljs-keyword"> bool</span>,<span class="hljs-keyword"> flags</span>)</code></pre>
+            <p></p>
+
+        </section>
+
+
+        <section id="CreateGUI">
+            <h2>Create Graphical User Interface</h2>
+            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">string</span>,<span class="hljs-keyword"> icon</span>)</code></pre>
+            <p>Creates a GUI</p>
+        </section>
+
+
+        <section id="CreateWindow">
+            <h2>lorem ipsum</h2>
+            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">char*</span>,<span class="hljs-keyword"> bool</span>, <span class="hljs-keyword">flags</span>)</code></pre>
+            <p>Creates a Window </p>
+            
+        </section>
+
+
+        <section id="Text">
+            <h2>Create Text</h2>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.Text(<span class="hljs-keyword">string</span>)</code></pre>
+            <p>Displays text</p>            
+        </section>
+
+
+        <section id="Button">
+            <h2>Create Button</h2>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">bool</span>&gt; Faith.Button(<span class="hljs-keyword">string</span>)</code></pre>
+            <p>Returns false/true whether the button has been clicked</p>            
+        </section>
+
+
+        <section id="Toggle">
+            <h2>Create Toggle</h2>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">bool</span>&gt; Faith.Toggle(<span class="hljs-keyword">string</span>, <span class="hljs-keyword">bool</span>)</code></pre>
+            <p>Returns false/true whether the toggle has been activated or not</p>            
+        </section>
+
+
+        <section id="Slider">
+            <h2>Create Slider</h2>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.Slider(<span class="hljs-keyword">string</span>, <span class="hljs-keyword">int</span> Out, <span class="hljs-keyword">int</span> min, <span class="hljs-keyword">int</span> max)</code></pre>
+            <p>Returns false/true whether the toggle has been activated or not</p>            
+        </section>
+
+
+        <section id="SameLine">
+            <h2>Keeping a module on the SameLine as the other one</h2>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.SameLine(<span class="hljs-keyword">ImVec2</span>)</code></pre>
+            <p>sets the module after this void to the same line as the module above SameLine.</p>            
+        </section>
+
+
+        <section id="css">
+            <h2>lorem ipsum</h2>
+            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">char*</span>,<span class="hljs-keyword"> bool</span>,<span class="hljs-keyword"> flags</span>)</code></pre>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
+        </section>
+
+
+        <section id="fonts">
+            <h2>lorem ipsum</h2>
+            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">char*</span>,<span class="hljs-keyword"> bool</span>,<span class="hljs-keyword"> flags</span>)</code></pre>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
+        </section>
+
+
+        <section id="developer">
+            <h2>lorem ipsum</h2>
+            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">char*</span>,<span class="hljs-keyword"> bool</span>,<span class="hljs-keyword"> flags</span>)</code></pre>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
+        </section>
+
+
+        <section id="examples">
+            <h2>lorem ipsum</h2>
+            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">char*</span>,<span class="hljs-keyword"> bool</span>,<span class="hljs-keyword"> flags</span>)</code></pre>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
+        </section>
+
+
+    
+    
+    
+    </article>
+
+
+
+
+<!-- Side navigation -->
+<!--<div class="sidenav">
+    <li>a</li>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>-->
+
+<!-- Start of Body 
+<div class="main">
+
+    <h2>lorem ipsum</h2>
+    <pre>
+        <code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">char*</span>,<span class="hljs-keyword"> bool</span>,<span class="hljs-keyword"> flags</span>)</code>
+    </pre>-->
+
+<!-- End of Body -->
+<!--</div>-->
+
+<script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mark.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/book.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
+
+
+</body></html>
