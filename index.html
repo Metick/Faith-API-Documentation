@@ -31,17 +31,18 @@
             <li>
                 <a href="#">Exisiting GUI </a>
                 <ul>
-                    <li><a href="#CreateGUI">Lorem ipsum</a></li>
-                    <li><a href="#CreateWindow">Lorem ipsum</a></li>
-                    <li><a href="#Text">Adding Text</a></li>
+                    <li><a href="#CreateGUI">Create Main GUI</a></li>
+                    <li><a href="#EndGUI">Ending Main GUI</a></li>
+                    <li><a href="#CreateWindow">Creating a Window</a></li>
                     <li><a href="#Button">Creating a Button</a></li>
                     <li><a href="#Toggle">Creating a Toggle</a></li>
                     <li><a href="#Slider">Creating a Slider</a></li>
                     <li><a href="#SameLine">Module on SameLine</a></li>
+                    <li><a href="#Text">Adding Text</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#css">Lorem Ipsum</a>
+                <a href="#CustomDrawing">Custom Drawing</a>
           <ul>
             <li><a href="#fonts">Lorem ipsum</a></li>
             <li><a href="#developer">Lorem ipsum</a></li>
@@ -62,31 +63,35 @@
             <div class="clearfix">
                 <p><i class="orange fa fa-exclamation-triangle"></i><bold><span class="intro2 ">Please understand that the documentation is still a Work in progress, and will be changed and modified. The current API version is V0.1</span>                         </p>
             </div>
-            <pre><code class=" language-syn hljs"><span class="hljs-keyword">local</span> Faith={}<br>Faith.CreateGUI(<span class="hljs-keyword">"MainWindow"</span>, <span class="hljs-keyword">TELEPORT</span>)<br>Faith.End()</code></pre>
+            <pre><code class=" language-syn hljs">Faith.CreateGUI(<span class="hljs-keyword">"MainWindow"</span>, <span class="hljs-keyword">TELEPORT</span>)<br>Faith.End()</code></pre>
             <p></p>
-            An Example on how to setup the GUI. - note to self, change the example code to have buttons etc.. also being shown and how to use. and initialize the table in the menu.
+            An Example on how to setup the GUI. // TODO change the example code to have buttons etc.. also being shown and how to use. and initialize the table in the menu.
         </section>
 
 
         <section id="CreateGUI">
-            <h2>Create Graphical User Interface</h2>
-            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">string</span>,<span class="hljs-keyword"> icon</span>)</code></pre>
-            <p>Creates a GUI</p>
+            <h2>Creating Graphical User Interface</h2>
+            <pre><code class=" language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.CreateGUI(<span class="hljs-keyword">string</span>,<span class="hljs-keyword"> icon</span>)</code></pre>
+            <p>Creates a GUI on our docking with the desired Icon.</p>
+            <p><em>Notes :</em></p>
+            <ul>
+                <li>You're Required to create a GUI in order to use our Existing GUI, If you don't use CreateGUI the menu wont draw.</li>
+                <li>When you use Faith.CreateGUI You're REQUIRED to have Faith.EndGUI on the end of the script. If you don't do so the game will crash.</li>
+            </ul>
         </section>
 
+        <section id="EndGUI">
+            <h2>Ending Graphical User Interface</h2>
+            <pre><code class=" language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.EndGUI()</code></pre>
+            <p>Whatever you do. have this on the end of your script.</p>
+
+        </section>
 
         <section id="CreateWindow">
-            <h2>lorem ipsum</h2>
-            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">char*</span>,<span class="hljs-keyword"> bool</span>, <span class="hljs-keyword">flags</span>)</code></pre>
-            <p>Creates a Window </p>
-            
-        </section>
+            <h2>Creating a Window</h2>
+            <pre><code class=" language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.CreateWindow(<span class="hljs-keyword">string</span>,<span class="hljs-keyword"> ImVec2 size</span>)</code></pre>
+            <p>Creates a Window where you can draw in the Buttons, Toggles, Text etc..</p>
 
-
-        <section id="Text">
-            <h2>Create Text</h2>
-            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.Text(<span class="hljs-keyword">string</span>)</code></pre>
-            <p>Displays text</p>            
         </section>
 
 
@@ -118,11 +123,16 @@
         </section>
 
 
-        <section id="css">
-            <h2>lorem ipsum</h2>
-            <pre><code class=" language-syn hljs">&lt;&gt; Faith.CreateGUI(<span class="hljs-keyword">char*</span>,<span class="hljs-keyword"> bool</span>,<span class="hljs-keyword"> flags</span>)</code></pre>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            
+        <section id="Text">
+            <h2>Create Text</h2>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.Text(<span class="hljs-keyword">string</span>)</code></pre>
+            <p>Displays text</p>            
+        </section>
+
+
+        <section id="CustomDrawing">
+            <h2>Custom Drawing</h2>
+            <p>From this point on, you have all kinds of features to create your own gui or use the api to create esp.</p>
         </section>
 
 
