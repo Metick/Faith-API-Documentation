@@ -56,6 +56,8 @@
     box-sizing: border-box;
   }
 
+
+
 .scrollbar::-webkit-scrollbar {
     display: none;
   }
