@@ -33,9 +33,10 @@
                 <ul>
                     <li><a href="#CreateGUI">Create Main GUI</a></li>
                     <li><a href="#EndGUI">Ending Main GUI</a></li>
-                    <li><a href="#CreateWindow">Creating a Window</a></li>
                     <li><a href="#Button">Creating a Button</a></li>
+					<li><a href="#FetchButton">Fetching a Button</a></li>
                     <li><a href="#Toggle">Creating a Toggle</a></li>
+					<li><a href="#FetchToggle">Fetching a Toggle</a></li>
                     <li><a href="#Slider">Creating a Slider</a></li>
                     <li><a href="#SameLine">Module on SameLine</a></li>
                     <li><a href="#Text">Adding Text</a></li>
@@ -57,13 +58,12 @@
     
     <article class="contents">
 
-
         <section id="intro">
             <h2>Getting Started</h2>
             <div class="clearfix">
                 <p><i class="orange fa fa-exclamation-triangle"></i><bold><span class="intro2 ">Please understand that the documentation is still a Work in progress, and will be changed and modified. The current API version is V0.1</span>                         </p>
             </div>
-            <pre><code class=" language-syn hljs">Faith.CreateGUI(<span class="hljs-keyword">"MainWindow"</span>, <span class="hljs-keyword">TELEPORT</span>)<br>Faith.End()</code></pre>
+            <pre><code class=" language-syn hljs">MakeWindow(<span class="hljs-keyword">"MainWindow"</span>, <span class="hljs-keyword">TELEPORT</span>, <span class="hljs-keyword">200</span>, <span class="hljs-keyword">200</span>)</code></pre>
             <p></p>
             An Example on how to setup the GUI. // TODO change the example code to have buttons etc.. also being shown and how to use. and initialize the table in the menu.
         </section>
@@ -71,47 +71,45 @@
 
         <section id="CreateGUI">
             <h2>Creating Graphical User Interface</h2>
-            <pre><code class=" language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.CreateGUI(<span class="hljs-keyword">string</span>,<span class="hljs-keyword"> icon</span>)</code></pre>
-            <p>Creates a GUI on our docking with the desired Icon.</p>
+            <pre><code class=" language-syn hljs">&lt;<span class="hljs-keyword">bool</span>&gt; MakeWindow(<span class="hljs-keyword">string</span> windowName,<span class="hljs-keyword"> string</span> icon,<span class="hljs-keyword"> float</span> SizeX,<span class="hljs-keyword"> float</span> SizeY)</code></pre>
+            <p>Returns Whether the window was created or if it failed</p>
             <p><em>Notes :</em></p>
             <ul>
                 <li>You're Required to create a GUI in order to use our Existing GUI, If you don't use CreateGUI the menu wont draw.</li>
-                <li>When you use Faith.CreateGUI You're REQUIRED to have Faith.EndGUI on the end of the script. If you don't do so the game will crash.</li>
+				<li>If it fails it's because the window name already exists</li>
             </ul>
-        </section>
-
-        <section id="EndGUI">
-            <h2>Ending Graphical User Interface</h2>
-            <pre><code class=" language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.EndGUI()</code></pre>
-            <p>Whatever you do. have this on the end of your script.</p>
-
-        </section>
-
-        <section id="CreateWindow">
-            <h2>Creating a Window</h2>
-            <pre><code class=" language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.CreateWindow(<span class="hljs-keyword">string</span>,<span class="hljs-keyword"> ImVec2 size</span>)</code></pre>
-            <p>Creates a Window where you can draw in the Buttons, Toggles, Text etc..</p>
-
         </section>
 
 
         <section id="Button">
             <h2>Create Button</h2>
-            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">bool</span>&gt; Faith.Button(<span class="hljs-keyword">string</span>)</code></pre>
-            <p>Returns false/true whether the button has been clicked</p>            
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">bool</span>&gt; MakeButton(<span class="hljs-keyword">string</span> Name, <span class="hljs-keyword">string</span> windowName)</code></pre>
+            <p>If true it worked, otherwise window doesn't exist.</p>            
         </section>
 
+        <section id="FetchButton">
+            <h2>Fetch a Button</h2>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">bool</span>&gt; FetchButton(<span class="hljs-keyword">string</span> Name, <span class="hljs-keyword">string</span> windowName)</code></pre>
+            <p>True = toggled, False = untoggled</p>            
+        </section>
 
         <section id="Toggle">
             <h2>Create Toggle</h2>
-            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">bool</span>&gt; Faith.Toggle(<span class="hljs-keyword">string</span>, <span class="hljs-keyword">bool</span>)</code></pre>
-            <p>Returns false/true whether the toggle has been activated or not</p>            
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">bool</span>&gt; MakeToggle(<span class="hljs-keyword">string</span> Name, <span class="hljs-keyword">string</span> windowName)</code></pre>
+            <p>If true it worked, otherwise window doesn't exist.</p>            
         </section>
+		
+		<section id="FetchToggle">
+            <h2>Fetch a Toggle</h2>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">bool</span>&gt; FetchToggle(<span class="hljs-keyword">string</span> Name, <span class="hljs-keyword">string</span> windowName)</code></pre>
+            <p>If true it worked, otherwise window doesn't exist.</p>            
+        </section>
+
 
 
         <section id="Slider">
             <h2>Create Slider</h2>
-            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.Slider(<span class="hljs-keyword">string</span>, <span class="hljs-keyword">int</span> Out, <span class="hljs-keyword">int</span> min, <span class="hljs-keyword">int</span> max)</code></pre>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.Slider(<span class="hljs-keyword">string</span> Name, <span class="hljs-keyword">int</span> Out, <span class="hljs-keyword">int</span> min, <span class="hljs-keyword">int</span> max)</code></pre>
             <p>Returns false/true whether the toggle has been activated or not</p>            
         </section>
 
@@ -125,7 +123,7 @@
 
         <section id="Text">
             <h2>Create Text</h2>
-            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.Text(<span class="hljs-keyword">string</span>)</code></pre>
+            <pre><code class="language-syn hljs">&lt;<span class="hljs-keyword">void</span>&gt; Faith.Text(<span class="hljs-keyword">string</span> Name)</code></pre>
             <p>Displays text</p>            
         </section>
 
